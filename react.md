@@ -17,6 +17,40 @@ Facebook decided to split off prop-types into their own npm package.
 
 Guide - [https://reactjs.org/docs/typechecking-with-proptypes.html](https://reactjs.org/docs/typechecking-with-proptypes.html)
 
+
+##### Typical Component Design
+
+```javascript
+
+class MyComponent extends React.Component{
+    static get propTypes(){
+        return {
+            //...
+        };
+    }
+
+    static get defaultProps(){
+        return {
+            //...
+        };
+    }
+
+    constructor(){
+        super()
+        // ...
+    }
+
+    // lifecycle methods
+
+    render(){
+        // ...
+    }
+
+    // event handlers / rendering smaller parts of component.
+}
+
+```
+
 ##### Thoughts
 - Been using React since late 2015.
 - After getting past the JSX stuff, I thought it seemed less tricky than Angular.
